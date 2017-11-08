@@ -1,0 +1,370 @@
+[
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/port_attached_row.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/port_attached_row.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/darker_gray_line.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/darker_gray_line.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/loading_indicator_overlay.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/RobotCore-release/res/layout/loading_indicator_overlay.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/file_info.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/file_info.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/loading_indicator_overlay.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/RobotCore-release/res/layout/loading_indicator_overlay.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_configure_from_template.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_configure_from_template.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_ftc_wifi_channel_selector.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_ftc_wifi_channel_selector.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/banner_parent.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/banner_parent.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/pwms.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/pwms.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/matrix_devices.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/matrix_devices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/device_interface_module.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/device_interface_module.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_load.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_load.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/shape.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/shape.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/analog_output_device.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_output_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_programming_mode.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/layout/activity_programming_mode.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/red_line.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/red_line.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/matrices.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/matrices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/digital_device.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/digital_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_swap_usb_devices.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_swap_usb_devices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_inspection.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/layout/activity_inspection.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_programming_mode.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/layout/activity_programming_mode.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_swap_usb_devices.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_swap_usb_devices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/digital_device.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/digital_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/matrices.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/matrices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_ftc_controller.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/actual_program/FtcRobotController/unspecified/res/layout/activity_ftc_controller.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/orange_warning.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/orange_warning.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_load.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_load.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/servo.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/servo.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/device_interface_module.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/device_interface_module.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_ftc_configuration.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_ftc_configuration.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_config_wifi_direct.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_config_wifi_direct.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/orange_warning.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/orange_warning.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/digital_devices.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/digital_devices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/pwms.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/pwms.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/template_info.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/template_info.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/info_button.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/info_button.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_view_logs.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_view_logs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/pwm_device.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/pwm_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/matrix_devices.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/matrix_devices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/motor_controller_banner.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor_controller_banner.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/i2c_device.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/i2c_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/file_info.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/file_info.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_ftc_wifi_channel_selector.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_ftc_wifi_channel_selector.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_inspection.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/layout/activity_inspection.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_blocks.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/layout/activity_blocks.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/servo_list.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/servo_list.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/analog_outputs.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_outputs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/darker_gray_line.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/darker_gray_line.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/button_list.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/button_list.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/simple_device.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/simple_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/motor_list.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor_list.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/header.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/actual_program/FtcRobotController/unspecified/res/layout/header.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/servo_controller_banner.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/servo_controller_banner.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/i2cs.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/i2cs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_ftc_configuration.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_ftc_configuration.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/analog_outputs.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_outputs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/template_info.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/template_info.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/servo.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/servo.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/header.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/ftc_app-master/FtcRobotController/unspecified/res/layout/header.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/motor_controller_banner.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor_controller_banner.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/analog_input_device.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_input_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/legacy.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/legacy.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_configure_from_template.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_configure_from_template.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/motor.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/legacy.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/legacy.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/pwm_device.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/pwm_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/analog_inputs.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_inputs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/banner_parent.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/banner_parent.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/digital_devices.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/digital_devices.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/simple_device.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/simple_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/analog_output_device.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_output_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_config_wifi_direct.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_config_wifi_direct.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/info_button.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/info_button.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_about.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_about.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/i2cs.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/i2cs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/item_list_parent.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/item_list_parent.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_blocks.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/layout/activity_blocks.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/motor_list.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor_list.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/shape.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/shape.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_about.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_about.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/analog_inputs.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_inputs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/red_line.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/red_line.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/servo_controller_banner.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/servo_controller_banner.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/port_attached_row.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/port_attached_row.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/activity_ftc_controller.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/ftc_app-master/FtcRobotController/unspecified/res/layout/activity_ftc_controller.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/analog_input_device.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_input_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/button_list.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/button_list.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/i2c_device.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/i2c_device.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/activity_view_logs.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_view_logs.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/layout/motor.xml",
+        "source": "/home/lemon/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/servo_list.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/servo_list.xml"
+    },
+    {
+        "merged": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/res/merged/debug/layout/item_list_parent.xml",
+        "source": "/home/lemon/Downloads/actual_program/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/item_list_parent.xml"
+    }
+]
