@@ -1,0 +1,4 @@
+#Fri Nov 17 16:05:59 PST 2017
+base.0=C\:\\Users\\The United Nerds\\Documents\\United-Nerds-Robotics\\actual_program\\TeamCode\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\Users\\The United Nerds\\Documents\\United-Nerds-Robotics\\actual_program\\TeamCode\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
