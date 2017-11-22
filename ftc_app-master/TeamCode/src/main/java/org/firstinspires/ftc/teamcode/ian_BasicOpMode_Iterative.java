@@ -68,8 +68,8 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         // Initialize the hardware variables. Note that the strings used here as parameters
         // to 'get' must correspond to the names assigned during the robot configuration
         // step (using the FTC Robot Controller app on the phone).
-        leftDrive = hardwareMap.get(DcMotor.class, "left_drive");
-        rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
+        leftDrive = hardwareMap.get(DcMotor.class, "lm");
+        rightDrive = hardwareMap.get(DcMotor.class, "rm");
         arm = hardwareMap.get(DcMotor.class, "arm");
         S1 = hardwareMap.get(DcMotor.class, "S1");
 
@@ -105,6 +105,8 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         // Setup a variable for each drive wheel to save power level for telemetry
         double leftPower;
         double rightPower;
+        boolean rightBump = false;
+        boolean leftBump = false;
 
         // Choose to drive using either Tank Mode, or POV Mode
         // Comment out the method that's not used.  The default below is POV.
@@ -137,22 +139,52 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         // rightPower = -gamepad1.right_stick_y ;
 
         // Send calculated power to wheels
-        leftDrive.setPower(leftPower/1.5);
-        rightDrive.setPower(rightPower/1.5);
+        //leftDrive.setPower(leftPower/1.5);
+        //rightDrive.setPower(rightPower/1.5);
 
+
+
+        if (gamepad1.right_bumper && leftBump == false) {
+            //arm.setPower(.5);
+            rightBump = true;
+        }
+        else if (gamepad1.left_bumper && rightBump == false) {
+            //arm.setPower(-.5);}
+            leftBump = true;
+        }
+        else if (gamepad1.right_bumper && leftBump == true){
+            leftBump = false;
+        }
+        else if (gamepad1.left_bumper && rightBump == true){
+            rightBump = false;
+        }
+
+        if(rightBump == true){
+            leftDrive.setPower(leftPower);
+            rightDrive.setPower(rightPower);
+        }
+        else if (leftBump == true){
+            leftDrive.setPower(leftPower/2.5);
+            rightDrive.setPower(rightPower/2.5);
+        }
+        else if (rightBump == false && leftBump == false){
+            leftDrive.setPower(leftPower/1.5);
+            rightDrive.setPower(rightPower/1.5);
+        }
+        if (gamepad1.right_trigger > 0) {
+            arm.setPower(gamepad1.right_trigger);
+        }
+        else if (gamepad1.left_trigger > 0){
+            arm.setPower(-gamepad1.left_trigger);
+        }
+
+
+                //arm.setPower(0);
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());
         telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
 
-        if (gamepad1.right_bumper) {
-            arm.setPower(.5);
-        } else {
-            if (gamepad1.left_bumper) {
-                arm.setPower(-.5);
-            } else {
-                arm.setPower(0);
-            }
-        }
+
     /* Code to run ONCE after the driver hits STOP
      */
     }
