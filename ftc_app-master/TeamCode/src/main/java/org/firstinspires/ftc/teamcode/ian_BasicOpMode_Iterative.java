@@ -56,7 +56,10 @@ public class ian_BasicOpMode_Iterative extends OpMode {
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
     private DcMotor arm = null;
-    private DcMotor S1 = null;
+    private Servo hand1;
+    private Servo hand2;
+
+    //private DcMotor S1 = null;
 
     /*
      * Code to run ONCE when the driver hits INIT
@@ -71,7 +74,9 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         leftDrive = hardwareMap.get(DcMotor.class, "lm");
         rightDrive = hardwareMap.get(DcMotor.class, "rm");
         arm = hardwareMap.get(DcMotor.class, "arm");
-        S1 = hardwareMap.get(DcMotor.class, "S1");
+        hand1 = hardwareMap.get(Servo.class, "hand1");
+        hand2 = hardwareMap.get(Servo.class, "hand2");
+        //S1 = hardwareMap.get(DcMotor.class, "S1");
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
@@ -118,7 +123,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         leftPower = Range.clip(drive + turn, -1.0, 1.0);
         rightPower = Range.clip(drive - turn, -1.0, 1.0);
 
-        if (gamepad1.y) {
+        /*if (gamepad1.y) {
             // move to 0 degrees.
             S1.setPower(.5);
         } else {
@@ -128,10 +133,10 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             } else {
                 S1.setPower(0);
             }
-        }
+        }*/
 
-            telemetry.addData("Motor S1", S1.getPower());
-            telemetry.update();
+          //  telemetry.addData("Motor S1", S1.getPower());
+           // telemetry.update();
 
         // Tank Mode uses one stick to co ntrol each wheel.
         // - This requires no math, but it is hard to drive forward slowly and keep straight.
@@ -178,7 +183,18 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             arm.setPower(-gamepad1.left_trigger);
         }
 
-
+        if (gamepade1.x == true){
+            hand1.setPosition(90);
+            hand2.setPosition(90);
+        }
+        else if(gamepad1.y == true){
+            hand1.setPosition(180);
+            hand2.setPosition(180);
+        }
+        else if (gamepad1.a == true){
+            hand1.setPosition(0);
+            hand2.setPosition(0);
+        }
                 //arm.setPower(0);
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());
