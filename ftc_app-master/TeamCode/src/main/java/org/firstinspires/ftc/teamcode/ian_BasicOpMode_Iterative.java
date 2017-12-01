@@ -183,7 +183,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             arm.setPower(-gamepad1.left_trigger);
         }
 
-        if (gamepade1.x == true){
+        if (gamepad1.x == true){
             hand1.setPosition(90);
             hand2.setPosition(90);
         }
