@@ -56,8 +56,8 @@ public class ian_BasicOpMode_Iterative extends OpMode {
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
     private DcMotor arm = null;
-    private Servo hand1;
-    private Servo hand2;
+    private Servo hand1 = null;
+    private Servo hand2 = null;
 
     //private DcMotor S1 = null;
 
@@ -76,7 +76,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         arm = hardwareMap.get(DcMotor.class, "arm");
         hand1 = hardwareMap.get(Servo.class, "hand1");
         hand2 = hardwareMap.get(Servo.class, "hand2");
-        //S1 = hardwareMap.get(DcMotor.class, "S1");
+        //arm = hardwareMap.get(DcMotor.class, "arm");
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
@@ -148,51 +148,62 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         //rightDrive.setPower(rightPower/1.5);
 
 
-
+        //Checks if right bumper is pressed and left bumper hasn't been pressed or has been unpressed
         if (gamepad1.right_bumper && leftBump == false) {
             //arm.setPower(.5);
             rightBump = true;
         }
+        //Does the opposite of the one above
         else if (gamepad1.left_bumper && rightBump == false) {
             //arm.setPower(-.5);}
             leftBump = true;
         }
+        //Check if the right bumper is pressed and the left bumper has been pressed
         else if (gamepad1.right_bumper && leftBump == true){
             leftBump = false;
         }
+        //Does the opposite of the one above
         else if (gamepad1.left_bumper && rightBump == true){
             rightBump = false;
         }
 
         if(rightBump == true){
+            //This is high speed
             leftDrive.setPower(leftPower);
             rightDrive.setPower(rightPower);
         }
         else if (leftBump == true){
+            //This is slow speed
             leftDrive.setPower(leftPower/2.5);
             rightDrive.setPower(rightPower/2.5);
         }
         else if (rightBump == false && leftBump == false){
+            //This is normal speed
             leftDrive.setPower(leftPower/1.5);
             rightDrive.setPower(rightPower/1.5);
         }
         if (gamepad1.right_trigger > 0) {
+            //Should set the power of the arm motor to what number the trigger is
             arm.setPower(gamepad1.right_trigger);
         }
         else if (gamepad1.left_trigger > 0){
+            //Should set the power of the arm motor to the opposite of what number the trigger is
             arm.setPower(-gamepad1.left_trigger);
         }
 
         if (gamepad1.x == true){
-            hand1.setPosition(90);
-            hand2.setPosition(90);
+            //Should set servos to 90 degrees
+            hand1.setPosition(0.5);
+            hand2.setPosition(0.5);
         }
-        else if(gamepad1.y == true){
-            hand1.setPosition(180);
-            hand2.setPosition(180);
-        }
-        else if (gamepad1.a == true){
+        else if(gamepad1.a == true){
+            //Should set servos to 180 degress
             hand1.setPosition(0);
+            hand2.setPosition(1);
+        }
+        else if (gamepad1.y == true){
+            //Should reset servos
+            hand1.setPosition(1);
             hand2.setPosition(0);
         }
                 //arm.setPower(0);
