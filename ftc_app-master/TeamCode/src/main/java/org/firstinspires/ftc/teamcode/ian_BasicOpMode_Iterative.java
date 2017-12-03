@@ -184,11 +184,11 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         }
         if (gamepad1.right_trigger > 0) {
             //Should set the power of the arm motor to what number the trigger is
-            arm.setPower(gamepad1.right_trigger);
+            arm.setPower(gamepad1.right_trigger/1.5);
         }
         else if (gamepad1.left_trigger > 0){
             //Should set the power of the arm motor to the opposite of what number the trigger is
-            arm.setPower(-gamepad1.left_trigger);
+            arm.setPower(-gamepad1.left_trigger/1.5);
         }
 
         if (gamepad1.x == true){
