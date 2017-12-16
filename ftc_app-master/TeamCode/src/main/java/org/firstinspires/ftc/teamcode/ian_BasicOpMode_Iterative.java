@@ -118,10 +118,10 @@ public class ian_BasicOpMode_Iterative extends OpMode {
 
         // POV Mode uses left stick to go forward, and right stick to turn.
         // - This uses basic math to combine motions and is easier to drive straight.
-        double drive = -gamepad1.left_stick_y;
-        double turn = -gamepad1.right_stick_x;
-        leftPower = Range.clip(drive + turn, -1.0, 1.0);
-        rightPower = Range.clip(drive - turn, -1.0, 1.0);
+//        double drive = -gamepad1.left_stick_y;
+  //      double turn = -gamepad1.right_stick_x;
+    //    leftPower = Range.clip(drive + turn, -1.0, 1.0);
+      //  rightPower = Range.clip(drive - turn, -1.0, 1.0);
 
         /*if (gamepad1.y) {
             // move to 0 degrees.
@@ -140,8 +140,8 @@ public class ian_BasicOpMode_Iterative extends OpMode {
 
         // Tank Mode uses one stick to co ntrol each wheel.
         // - This requires no math, but it is hard to drive forward slowly and keep straight.
-        // leftPower  = -gamepad1.left_stick_y ;
-        // rightPower = -gamepad1.right_stick_y ;
+        leftPower  = gamepad1.left_stick_y ;
+        rightPower = gamepad1.right_stick_y ;
 
         // Send calculated power to wheels
         //leftDrive.setPower(leftPower/1.5);
@@ -166,29 +166,35 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         else if (gamepad1.left_bumper && rightBump == true){
             rightBump = false;
         }
-
-        if(rightBump == true){
-            //This is high speed
-            leftDrive.setPower(leftPower);
-            rightDrive.setPower(rightPower);
+        if(gamepad1.left_stick_y >= 0.20 || gamepad1.right_stick_y >= 0.20 || gamepad1.left_stick_y <= -0.20 || gamepad1.right_stick_y <= -0.20) {
+            if (rightBump == true) {
+                //This is high speed
+                leftDrive.setPower(leftPower);
+                rightDrive.setPower(rightPower);
+            } else if (leftBump == true) {
+                //This is slow speed
+                leftDrive.setPower(leftPower / 2.5);
+                rightDrive.setPower(rightPower / 2.5);
+            } else if (rightBump == false && leftBump == false) {
+                //This is normal speed
+                leftDrive.setPower(leftPower / 1.5);
+                rightDrive.setPower(rightPower / 1.5);
+            }
         }
-        else if (leftBump == true){
-            //This is slow speed
-            leftDrive.setPower(leftPower/2.5);
-            rightDrive.setPower(rightPower/2.5);
-        }
-        else if (rightBump == false && leftBump == false){
-            //This is normal speed
-            leftDrive.setPower(leftPower/1.5);
-            rightDrive.setPower(rightPower/1.5);
+        else{
+            leftDrive.setPower(0.0);
+            rightDrive.setPower(0.0);
         }
         if (gamepad1.right_trigger > 0) {
             //Should set the power of the arm motor to what number the trigger is
-            arm.setPower(gamepad1.right_trigger/1.5);
+            arm.setPower(1.0);
         }
         else if (gamepad1.left_trigger > 0){
             //Should set the power of the arm motor to the opposite of what number the trigger is
-            arm.setPower(-gamepad1.left_trigger/1.5);
+            arm.setPower(-1.0);
+        }
+        else{
+            arm.setPower(0.0);
         }
 
         if (gamepad1.x == true){
