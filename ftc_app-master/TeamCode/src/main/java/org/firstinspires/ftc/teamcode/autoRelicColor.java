@@ -6,6 +6,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.hardware.ColorSensor;
 /* Copyright (c) 2017 FIRST. All rights reserved.
 
 
@@ -60,6 +61,7 @@ public class autoRelicColor extends LinearOpMode {
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
+    private ColorSensor colorSensor;
     //private DcMotor arm = null;
     //private DcMotor S1 = null;
 
@@ -75,6 +77,7 @@ public class autoRelicColor extends LinearOpMode {
         // step (using the FTC Robot Controller app on the phone).
         leftDrive = hardwareMap.get(DcMotor.class, "lm");
         rightDrive = hardwareMap.get(DcMotor.class, "rm");
+        colorSensor = hardwareMap.colorSensor.get("color");
         //arm = hardwareMap.get(DcMotor.class, "arm");
         //S1 = hardwareMap.get(DcMotor.class, "S1");
 

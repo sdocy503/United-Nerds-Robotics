@@ -112,6 +112,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         double rightPower;
         boolean rightBump = false;
         boolean leftBump = false;
+        boolean y = false;
 
         // Choose to drive using either Tank Mode, or POV Mode
         // Comment out the method that's not used.  The default below is POV.
@@ -142,6 +143,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         // - This requires no math, but it is hard to drive forward slowly and keep straight.
         leftPower  = gamepad1.left_stick_y ;
         rightPower = gamepad1.right_stick_y ;
+
 
         // Send calculated power to wheels
         //leftDrive.setPower(leftPower/1.5);
@@ -197,21 +199,28 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             arm.setPower(0.0);
         }
 
-        if (gamepad1.x == true){
-            //Should set servos to 90 degrees
-            hand1.setPosition(0.5);
-            hand2.setPosition(0.5);
-        }
-        else if(gamepad1.a == true){
-            //Should set servos to 180 degress
+        //if (gamepad1.x == true){
+        //    //Should set servos to 90 degrees
+        //    hand1.setPosition(0.5);
+        //    hand2.setPosition(0.5);
+        //}
+        if(gamepad1.x == true){
+            //Moves servo outwards
+            hand1.setPosition(0);
             hand1.setPosition(0);
             hand2.setPosition(1);
         }
-        else if (gamepad1.y == true){
-            //Should reset servos
+        else if (gamepad1.a == true){
+            //Moves servo inwards
             hand1.setPosition(1);
             hand2.setPosition(0);
         }
+        else{
+            //Stops servos
+            hand1.setPosition(0.5);
+            hand2.setPosition(0.5);
+        }
+
                 //arm.setPower(0);
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());
