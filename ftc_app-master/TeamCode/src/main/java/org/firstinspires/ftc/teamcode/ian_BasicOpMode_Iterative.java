@@ -151,21 +151,21 @@ public class ian_BasicOpMode_Iterative extends OpMode {
 
 
         //Checks if right bumper is pressed and left bumper hasn't been pressed or has been unpressed
-        if (gamepad1.right_bumper && leftBump == false) {
+        if (gamepad1.a && leftBump == false) {
             //arm.setPower(.5);
             rightBump = true;
         }
         //Does the opposite of the one above
-        else if (gamepad1.left_bumper && rightBump == false) {
+        else if (gamepad1.a && rightBump == false) {
             //arm.setPower(-.5);}
             leftBump = true;
         }
         //Check if the right bumper is pressed and the left bumper has been pressed
-        else if (gamepad1.right_bumper && leftBump == true){
+        else if (gamepad1.b && leftBump == true){
             leftBump = false;
         }
         //Does the opposite of the one above
-        else if (gamepad1.left_bumper && rightBump == true){
+        else if (gamepad1.b && rightBump == true){
             rightBump = false;
         }
         if(gamepad1.left_stick_y >= 0.20 || gamepad1.right_stick_y >= 0.20 || gamepad1.left_stick_y <= -0.20 || gamepad1.right_stick_y <= -0.20) {
@@ -204,13 +204,13 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         //    hand1.setPosition(0.5);
         //    hand2.setPosition(0.5);
         //}
-        if(gamepad1.x == true){
+        if(gamepad1.left_bumper == true){
             //Moves servo outwards
             hand1.setPosition(0);
             hand1.setPosition(0);
             hand2.setPosition(1);
         }
-        else if (gamepad1.a == true){
+        else if (gamepad1.right_bumper == true){
             //Moves servo inwards
             hand1.setPosition(1);
             hand2.setPosition(0);

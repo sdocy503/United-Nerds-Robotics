@@ -54,6 +54,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  */
 
 @Autonomous(name="AutoVLeft", group="Linear Opmode")  // @RedAutonomous(...) is the other common choice
+@Disabled
 public class CombustibleAmouse extends LinearOpMode {
 
     /* Declare OpMode members. */

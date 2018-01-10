@@ -95,8 +95,8 @@ public class autoRelicArmLeft extends LinearOpMode {
         //Wait for play to be pressed
         waitForStart();
         runtime.reset();
-        hand1.setPosition(0);
-        hand2.setPosition(1);
+        hand1.setPosition(1);
+        hand2.setPosition(0);
         leftDrive.setPower(0.25);
         rightDrive.setPower(0.25);
         while (opModeIsActive() &&(runtime.seconds() < 1.25)){
@@ -107,42 +107,49 @@ public class autoRelicArmLeft extends LinearOpMode {
         while (opModeIsActive() &&(runtime.seconds() < 2.5)){
             telemetry.addData("Turning", runtime.seconds());
         }
-        leftDrive.setPower(-0.25);
-        rightDrive.setPower(0.25);
-        while (opModeIsActive() &&(runtime.seconds() < 4.5)){
+        leftDrive.setPower(-0.5);
+        rightDrive.setPower(0.5);
+        while (opModeIsActive() &&(runtime.seconds() < 3.25)){
             telemetry.addData("Turning", runtime.seconds());
         }
         leftDrive.setPower(0.0);
         rightDrive.setPower(0.0);
-        while (opModeIsActive() &&(runtime.seconds() < 5.5)){
+        while (opModeIsActive() &&(runtime.seconds() < 3.75)){
             telemetry.addData("Turning", runtime.seconds());
         }
         arm.setPower(1.0);
-        while (opModeIsActive() &&(runtime.seconds() < 6.0)){
+        while (opModeIsActive() &&(runtime.seconds() < 4.25)){
             telemetry.addData("Turning", runtime.seconds());
         }
         arm.setPower(0.0);
-        while (opModeIsActive() &&(runtime.seconds() < 7.0)){
+        while (opModeIsActive() &&(runtime.seconds() < 5.25)){
             telemetry.addData("Turning", runtime.seconds());
         }
-        leftDrive.setPower(0.1);
-        rightDrive.setPower(0.1);
-        while (opModeIsActive() &&(runtime.seconds() < 7.25)){
+        leftDrive.setPower(0.15);
+        rightDrive.setPower(0.15);
+        while (opModeIsActive() &&(runtime.seconds() < 5.75)){
             telemetry.addData("Moving Forward", runtime.seconds());
         }
         leftDrive.setPower(0.0);
         rightDrive.setPower(0.0);
-
-        hand1.setPosition(1);
-        hand2.setPosition(0);
+        while (opModeIsActive() &&(runtime.seconds() < 6.0)){
+            telemetry.addData("Moving Forward", runtime.seconds());
+        }
+        hand1.setPosition(0);
+        hand2.setPosition(1);
+        while (opModeIsActive() &&(runtime.seconds() < 7.25)){
+            telemetry.addData("Moving Forward", runtime.seconds());
+        }
+        hand1.setPosition(0.5);
+        hand2.setPosition(0.5);
+        while (opModeIsActive() &&(runtime.seconds() < 7.75)){
+            telemetry.addData("Moving Forward", runtime.seconds());
+        }
+        arm.setPower(1.0);
         while (opModeIsActive() &&(runtime.seconds() < 8.25)){
             telemetry.addData("Moving Forward", runtime.seconds());
         }
-        leftDrive.setPower(-0.25);
-        rightDrive.setPower(-0.25);
-        while (opModeIsActive() &&(runtime.seconds() < 8.35)){
-            telemetry.addData("Moving Forward", runtime.seconds());
-        }
+        arm.setPower(0.0);
         stop();
     }
 }

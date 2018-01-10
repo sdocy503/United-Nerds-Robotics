@@ -84,7 +84,7 @@ public class SensorMRColor extends LinearOpMode {
     colorSensor = hardwareMap.colorSensor.get("cs");
 
     // Set the LED in the beginning
-    colorSensor.enableLed(bLedOn);
+    colorSensor.enableLed(true);
 
     // wait for the start button to be pressed.
     waitForStart();
@@ -94,7 +94,7 @@ public class SensorMRColor extends LinearOpMode {
     while (opModeIsActive()) {
 
       // check the status of the x button on either gamepad.
-      bCurrState = gamepad1.x;
+      //bCurrState = gamepad1.x;
 
       // check for button state transitions.
       //if ((bCurrState == true) && (bCurrState != bPrevState))  {
@@ -105,7 +105,7 @@ public class SensorMRColor extends LinearOpMode {
       //}
 
       // update previous state variable.
-      bPrevState = bCurrState;
+      //bPrevState = bCurrState;
 
       // convert the RGB values to HSV values.
       //Color.RGBToHSV(colorSensor.red() * 8, colorSensor.green() * 8, colorSensor.blue() * 8, hsvValues);

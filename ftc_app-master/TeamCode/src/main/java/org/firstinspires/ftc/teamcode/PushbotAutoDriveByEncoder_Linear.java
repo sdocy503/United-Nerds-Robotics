@@ -39,6 +39,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 @Autonomous(name="Nope1", group="Linear Opmode")
+@Disabled
 public class PushbotAutoDriveByEncoder_Linear extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
