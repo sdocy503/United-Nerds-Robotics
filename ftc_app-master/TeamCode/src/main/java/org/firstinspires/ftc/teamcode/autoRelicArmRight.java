@@ -64,6 +64,7 @@ public class autoRelicArmRight extends LinearOpMode {
     private DcMotor arm = null;
     private Servo hand1 = null;
     private Servo hand2 = null;
+    private Servo smolArm = null;
     //private DcMotor arm = null;
     //private DcMotor S1 = null;
 
@@ -82,6 +83,7 @@ public class autoRelicArmRight extends LinearOpMode {
         arm = hardwareMap.get(DcMotor.class, "arm");
         hand1 = hardwareMap.get(Servo.class, "hand1");
         hand2 = hardwareMap.get(Servo.class, "hand2");
+        smolArm = hardwareMap.get(Servo.class, "smolArm");
         //arm = hardwareMap.get(DcMotor.class, "arm");
         //S1 = hardwareMap.get(DcMotor.class, "S1");
 
@@ -95,6 +97,7 @@ public class autoRelicArmRight extends LinearOpMode {
         //Wait for play to be pressed
         waitForStart();
         runtime.reset();
+        smolArm.setPosition(1);
         hand1.setPosition(1);
         hand2.setPosition(0);
         leftDrive.setPower(0.25);

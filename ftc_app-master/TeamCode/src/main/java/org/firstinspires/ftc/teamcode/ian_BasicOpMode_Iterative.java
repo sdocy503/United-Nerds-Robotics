@@ -58,6 +58,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
     private DcMotor arm = null;
     private Servo hand1 = null;
     private Servo hand2 = null;
+    private Servo smolArm = null;
 
     //private DcMotor S1 = null;
 
@@ -76,6 +77,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         arm = hardwareMap.get(DcMotor.class, "arm");
         hand1 = hardwareMap.get(Servo.class, "hand1");
         hand2 = hardwareMap.get(Servo.class, "hand2");
+        smolArm = hardwareMap.get(Servo.class, "smolArm");
         //arm = hardwareMap.get(DcMotor.class, "arm");
 
         // Most robots need the motor on one side to be reversed to drive forward
@@ -161,19 +163,19 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             leftBump = true;
         }
         //Check if the right bumper is pressed and the left bumper has been pressed
-        else if (gamepad1.b && leftBump == true){
+        else if (gamepad1.b && leftBump){
             leftBump = false;
         }
         //Does the opposite of the one above
-        else if (gamepad1.b && rightBump == true){
+        else if (gamepad1.b && rightBump){
             rightBump = false;
         }
         if(gamepad1.left_stick_y >= 0.20 || gamepad1.right_stick_y >= 0.20 || gamepad1.left_stick_y <= -0.20 || gamepad1.right_stick_y <= -0.20) {
-            if (rightBump == true) {
+            if (rightBump) {
                 //This is high speed
                 leftDrive.setPower(leftPower);
                 rightDrive.setPower(rightPower);
-            } else if (leftBump == true) {
+            } else if (leftBump) {
                 //This is slow speed
                 leftDrive.setPower(leftPower / 2.5);
                 rightDrive.setPower(rightPower / 2.5);
@@ -204,13 +206,13 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         //    hand1.setPosition(0.5);
         //    hand2.setPosition(0.5);
         //}
-        if(gamepad1.left_bumper == true){
+        if(gamepad1.left_bumper){
             //Moves servo outwards
             hand1.setPosition(0);
             hand1.setPosition(0);
             hand2.setPosition(1);
         }
-        else if (gamepad1.right_bumper == true){
+        else if (gamepad1.right_bumper){
             //Moves servo inwards
             hand1.setPosition(1);
             hand2.setPosition(0);
@@ -220,7 +222,12 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             hand1.setPosition(0.5);
             hand2.setPosition(0.5);
         }
-
+        if (gamepad1.y){
+            smolArm.setPosition(0);
+        }
+        else if (gamepad1.x){
+            smolArm.setPosition(1);
+        }
                 //arm.setPower(0);
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());

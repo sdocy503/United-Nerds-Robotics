@@ -5,9 +5,10 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.hardware.ColorSensor;
-/* Copyright (c) 2017 FIRST. All rights reserved.
+/** Copyright (c) 2017 FIRST. All rights reserved.
 
 
  *
@@ -62,8 +63,11 @@ public class autoRelicColor extends LinearOpMode {
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
     private ColorSensor colorSensor;
-    //private DcMotor arm = null;
-    //private DcMotor S1 = null;
+    private Servo smolArm = null;
+    private DcMotor arm = null;
+    private Servo hand1 = null;
+    private Servo hand2 = null;
+    private Servo swivel = null;
 
     /*
      * Code to run ONCE when the driver hits INIT
@@ -78,8 +82,11 @@ public class autoRelicColor extends LinearOpMode {
         leftDrive = hardwareMap.get(DcMotor.class, "lm");
         rightDrive = hardwareMap.get(DcMotor.class, "rm");
         colorSensor = hardwareMap.colorSensor.get("color");
-        //arm = hardwareMap.get(DcMotor.class, "arm");
-        //S1 = hardwareMap.get(DcMotor.class, "S1");
+        arm = hardwareMap.get(DcMotor.class, "arm");
+        smolArm = hardwareMap.get(Servo.class, "smolArm");
+        hand1 = hardwareMap.get(Servo.class, "hand1");
+        hand2 = hardwareMap.get(Servo.class, "hand2");
+        swivel = hardwareMap.get(Servo.class, "swivel");
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
@@ -88,18 +95,44 @@ public class autoRelicColor extends LinearOpMode {
 
         // Tell the driver that initialization is complete.
         telemetry.addData("Status", "Initialized");
+        hand1.setPosition(0.6);
+        hand2.setPosition(0.4);
         //Wait for play to be pressed
         waitForStart();
         runtime.reset();
 
-        leftDrive.setPower(0.5);
-        rightDrive.setPower(0.5);
-        while (opModeIsActive() &&(runtime.seconds() < 1.0)){
-            telemetry.addData("Moving Forward", runtime.seconds());
+        smolArm.setPosition(1);
+        swivel.setPosition(0.5);
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+            telemetry.addData("Arm Out", runtime.seconds());
         }
-        leftDrive.setPower(0.0);
-        rightDrive.setPower(0.0);
-
+        //swivel.setPosition(1);
+        //hand1.setPosition(0.5);
+        //hand2.setPosition(0.5);
+        smolArm.setPosition(0);
+        while (opModeIsActive() && (runtime.seconds() < 3.0)) {
+            telemetry.addData("Arm Out", runtime.seconds());
+        }
+        if(colorSensor.red() > 0) {
+            swivel.setPosition(0);
+            while (opModeIsActive() && (runtime.seconds() < 4.0)) {
+                telemetry.addData("Swiveling", runtime.seconds());
+            }
+            smolArm.setPosition(1.0);
+            while (opModeIsActive() && (runtime.seconds() < 5.0)) {
+                telemetry.addData("Arm In", runtime.seconds());
+            }
+        }
+        else if(colorSensor.blue() > 0){
+            swivel.setPosition(1);
+            while (opModeIsActive() && (runtime.seconds() < 4.0)) {
+                telemetry.addData("Swiveling", runtime.seconds());
+            }
+            smolArm.setPosition(1);
+            while (opModeIsActive() && (runtime.seconds() < 5.0)) {
+                telemetry.addData("Arm In", runtime.seconds());
+            }
+        }
         stop();
     }
 }
