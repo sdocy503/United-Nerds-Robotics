@@ -90,13 +90,11 @@ public class autoRelicColor extends LinearOpMode {
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
-        leftDrive.setDirection(DcMotor.Direction.FORWARD);
-        rightDrive.setDirection(DcMotor.Direction.REVERSE);
+        leftDrive.setDirection(DcMotor.Direction.REVERSE);
+        rightDrive.setDirection(DcMotor.Direction.FORWARD);
 
         // Tell the driver that initialization is complete.
         telemetry.addData("Status", "Initialized");
-        hand1.setPosition(0.6);
-        hand2.setPosition(0.4);
         //Wait for play to be pressed
         waitForStart();
         runtime.reset();
@@ -124,14 +122,25 @@ public class autoRelicColor extends LinearOpMode {
             }
         }
         else if(colorSensor.blue() > 0){
-            swivel.setPosition(1);
+            swivel.setPosition(1.0);
             while (opModeIsActive() && (runtime.seconds() < 4.0)) {
                 telemetry.addData("Swiveling", runtime.seconds());
             }
-            smolArm.setPosition(1);
+            smolArm.setPosition(1.0);
             while (opModeIsActive() && (runtime.seconds() < 5.0)) {
                 telemetry.addData("Arm In", runtime.seconds());
             }
+
+        }
+        leftDrive.setPower(.3);
+        rightDrive.setPower(.3);
+        while (opModeIsActive() && (runtime.seconds() < 6.5)) {
+            telemetry.addData("Swiveling", runtime.seconds());
+        }
+        leftDrive.setPower(.1);
+        rightDrive.setPower(-.1);
+        while (opModeIsActive() && (runtime.seconds() < 7.5)) {
+            telemetry.addData("Swiveling", runtime.seconds());
         }
         stop();
     }

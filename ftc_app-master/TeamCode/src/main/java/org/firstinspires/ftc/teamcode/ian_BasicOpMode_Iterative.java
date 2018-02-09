@@ -153,21 +153,21 @@ public class ian_BasicOpMode_Iterative extends OpMode {
 
 
         //Checks if right bumper is pressed and left bumper hasn't been pressed or has been unpressed
-        if (gamepad1.a && leftBump == false) {
+        if (gamepad1.y && leftBump == false) {
             //arm.setPower(.5);
             rightBump = true;
         }
         //Does the opposite of the one above
-        else if (gamepad1.a && rightBump == false) {
+        else if (gamepad1.x && rightBump == false) {
             //arm.setPower(-.5);}
             leftBump = true;
         }
         //Check if the right bumper is pressed and the left bumper has been pressed
-        else if (gamepad1.b && leftBump){
+        else if (gamepad1.x && leftBump){
             leftBump = false;
         }
         //Does the opposite of the one above
-        else if (gamepad1.b && rightBump){
+        else if (gamepad1.y && rightBump){
             rightBump = false;
         }
         if(gamepad1.left_stick_y >= 0.20 || gamepad1.right_stick_y >= 0.20 || gamepad1.left_stick_y <= -0.20 || gamepad1.right_stick_y <= -0.20) {
