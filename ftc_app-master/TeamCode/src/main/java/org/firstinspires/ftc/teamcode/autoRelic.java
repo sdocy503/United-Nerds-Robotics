@@ -56,6 +56,7 @@ import com.qualcomm.robotcore.util.Range;
  */
 
 @Autonomous(name="AutoRelic", group="Iterative Opmode")
+@Disabled
 public class autoRelic extends LinearOpMode {
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();

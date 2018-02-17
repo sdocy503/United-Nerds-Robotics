@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode;
 //import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
@@ -56,7 +57,8 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@Autonomous(name="AutoRelicColor", group="Iterative Opmode")
+@Autonomous(name="AutoRelicRedRight", group="Iterative Opmode")
+@Disabled
 public class autoRelicColor extends LinearOpMode {
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
@@ -92,6 +94,7 @@ public class autoRelicColor extends LinearOpMode {
         // Reverse the motor that runs backwards when connected directly to the battery
         leftDrive.setDirection(DcMotor.Direction.REVERSE);
         rightDrive.setDirection(DcMotor.Direction.FORWARD);
+        arm.setDirection(DcMotor.Direction.REVERSE);
 
         // Tell the driver that initialization is complete.
         telemetry.addData("Status", "Initialized");
@@ -101,6 +104,9 @@ public class autoRelicColor extends LinearOpMode {
 
         smolArm.setPosition(1);
         swivel.setPosition(0.5);
+        hand1.setPosition(1);
+        hand2.setPosition(0);
+        arm.setPower(1);
         while (opModeIsActive() && (runtime.seconds() < 1.0)) {
             telemetry.addData("Arm Out", runtime.seconds());
         }
@@ -108,6 +114,7 @@ public class autoRelicColor extends LinearOpMode {
         //hand1.setPosition(0.5);
         //hand2.setPosition(0.5);
         smolArm.setPosition(0);
+        arm.setPower(0);
         while (opModeIsActive() && (runtime.seconds() < 3.0)) {
             telemetry.addData("Arm Out", runtime.seconds());
         }
@@ -134,14 +141,46 @@ public class autoRelicColor extends LinearOpMode {
         }
         leftDrive.setPower(.3);
         rightDrive.setPower(.3);
-        while (opModeIsActive() && (runtime.seconds() < 6.5)) {
+        while (opModeIsActive() && (runtime.seconds() < 6.25)) {
             telemetry.addData("Swiveling", runtime.seconds());
         }
-        leftDrive.setPower(.1);
-        rightDrive.setPower(-.1);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
         while (opModeIsActive() && (runtime.seconds() < 7.5)) {
             telemetry.addData("Swiveling", runtime.seconds());
         }
+        leftDrive.setPower(.35);
+        rightDrive.setPower(-.45);
+        while (opModeIsActive() && (runtime.seconds() < 8.55)) {
+            telemetry.addData("Swiveling", runtime.seconds());
+        }
+        leftDrive.setPower(.5);
+        rightDrive.setPower(.5);
+        while (opModeIsActive() && (runtime.seconds() < 11.0)) {
+            telemetry.addData("Swiveling", runtime.seconds());
+        }
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        while (opModeIsActive() && (runtime.seconds() < 12.0)) {
+            telemetry.addData("Swiveling", runtime.seconds());
+        }
+        hand1.setPosition(0);
+        hand2.setPosition(1);
+        while (opModeIsActive() && (runtime.seconds() < 12.5)) {
+            telemetry.addData("Swiveling", runtime.seconds());
+        }
+        hand1.setPosition(0.5);
+        hand2.setPosition(0.5);
+        while (opModeIsActive() && (runtime.seconds() < 13.0)) {
+            telemetry.addData("Swiveling", runtime.seconds());
+        }
+        leftDrive.setPower(-0.3);
+        rightDrive.setPower(-0.3);
+        while (opModeIsActive() && (runtime.seconds() < 13.4)) {
+            telemetry.addData("Swiveling", runtime.seconds());
+        }
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
         stop();
     }
 }

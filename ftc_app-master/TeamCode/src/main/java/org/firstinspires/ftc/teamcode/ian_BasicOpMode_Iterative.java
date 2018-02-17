@@ -31,6 +31,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 import com.qualcomm.robotcore.hardware.Servo;
@@ -59,6 +60,10 @@ public class ian_BasicOpMode_Iterative extends OpMode {
     private Servo hand1 = null;
     private Servo hand2 = null;
     private Servo smolArm = null;
+    //private DcMotor otherArm = null;
+    private Servo flipper = null;
+    private Servo claw = null;
+    private DcMotor horizontal = null;
 
     //private DcMotor S1 = null;
 
@@ -78,12 +83,18 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         hand1 = hardwareMap.get(Servo.class, "hand1");
         hand2 = hardwareMap.get(Servo.class, "hand2");
         smolArm = hardwareMap.get(Servo.class, "smolArm");
+        //otherArm = hardwareMap.get(DcMotor.class, "arm2");
+        flipper = hardwareMap.get(Servo.class, "flip");
+        claw = hardwareMap.get(Servo.class, "claw");
+        horizontal = hardwareMap.get(DcMotor.class, "horizontal");
         //arm = hardwareMap.get(DcMotor.class, "arm");
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
         leftDrive.setDirection(DcMotor.Direction.FORWARD);
         rightDrive.setDirection(DcMotor.Direction.REVERSE);
+        arm.setDirection(DcMotor.Direction.REVERSE);
+        horizontal.setDirection(DcMotor.Direction.REVERSE);
 
         // Tell the driver that initialization is complete.
         telemetry.addData("Status", "Initialized");
@@ -189,30 +200,30 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             leftDrive.setPower(0.0);
             rightDrive.setPower(0.0);
         }
-        if (gamepad1.right_trigger > 0) {
-            //Should set the power of the arm motor to what number the trigger is
-            arm.setPower(1.0);
-        }
-        else if (gamepad1.left_trigger > 0){
-            //Should set the power of the arm motor to the opposite of what number the trigger is
-            arm.setPower(-1.0);
-        }
-        else{
-            arm.setPower(0.0);
-        }
 
+            arm.setPower(gamepad2.left_stick_y);
+
+        //if (gamepad2.a){
+         //   otherArm.setPower(1);
+        //}
+        //else if(gamepad2.b){
+         //   otherArm.setPower(-1);
+        //}
+        //else{
+        //    otherArm.setPower(0);
+        //}
         //if (gamepad1.x == true){
         //    //Should set servos to 90 degrees
         //    hand1.setPosition(0.5);
         //    hand2.setPosition(0.5);
         //}
-        if(gamepad1.left_bumper){
+        if(gamepad2.left_bumper){
             //Moves servo outwards
             hand1.setPosition(0);
             hand1.setPosition(0);
             hand2.setPosition(1);
         }
-        else if (gamepad1.right_bumper){
+        else if (gamepad2.right_bumper){
             //Moves servo inwards
             hand1.setPosition(1);
             hand2.setPosition(0);
@@ -222,11 +233,36 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             hand1.setPosition(0.5);
             hand2.setPosition(0.5);
         }
-        if (gamepad1.y){
+
+        if (gamepad2.y){
             smolArm.setPosition(0);
         }
-        else if (gamepad1.x){
+        else if (gamepad2.x){
             smolArm.setPosition(1);
+        }
+
+        if(gamepad2.dpad_up){
+            flipper.setPosition(1);
+        }
+        else if(gamepad2.dpad_down){
+            flipper.setPosition(0);
+        }
+
+        if(gamepad2.dpad_left){
+            claw.setPosition(1);
+        }
+        else if(gamepad2.dpad_right){
+            claw.setPosition(0);
+        }
+
+        if (gamepad1.left_trigger > 0){
+            horizontal.setPower(-gamepad1.left_trigger);
+        }
+        else if (gamepad1.right_trigger > 0){
+            horizontal.setPower(gamepad1.right_trigger);
+        }
+        else{
+            horizontal.setPower(0);
         }
                 //arm.setPower(0);
         // Show the elapsed game time and wheel power.
