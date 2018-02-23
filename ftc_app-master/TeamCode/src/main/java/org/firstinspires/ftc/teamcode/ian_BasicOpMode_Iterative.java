@@ -60,10 +60,11 @@ public class ian_BasicOpMode_Iterative extends OpMode {
     private Servo hand1 = null;
     private Servo hand2 = null;
     private Servo smolArm = null;
-    //private DcMotor otherArm = null;
+    private DcMotor relicArm = null;
     private Servo flipper = null;
     private Servo claw = null;
     private DcMotor horizontal = null;
+    private DcMotor verticalRelicArm = null;
 
     //private DcMotor S1 = null;
 
@@ -83,10 +84,11 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         hand1 = hardwareMap.get(Servo.class, "hand1");
         hand2 = hardwareMap.get(Servo.class, "hand2");
         smolArm = hardwareMap.get(Servo.class, "smolArm");
-        //otherArm = hardwareMap.get(DcMotor.class, "arm2");
+        relicArm = hardwareMap.get(DcMotor.class, "relicArm");
         flipper = hardwareMap.get(Servo.class, "flip");
         claw = hardwareMap.get(Servo.class, "claw");
         horizontal = hardwareMap.get(DcMotor.class, "horizontal");
+        verticalRelicArm = hardwareMap.get(DcMotor.class, "verticalMove");
         //arm = hardwareMap.get(DcMotor.class, "arm");
 
         // Most robots need the motor on one side to be reversed to drive forward
@@ -113,6 +115,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
     @Override
     public void start() {
         runtime.reset();
+        flipper.setPosition(1);
     }
 
     /*
@@ -234,7 +237,7 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             hand2.setPosition(0.5);
         }
 
-        if (gamepad2.y){
+        if (gamepad2.b){
             smolArm.setPosition(0);
         }
         else if (gamepad2.x){
@@ -245,11 +248,11 @@ public class ian_BasicOpMode_Iterative extends OpMode {
             flipper.setPosition(1);
         }
         else if(gamepad2.dpad_down){
-            flipper.setPosition(0);
+            flipper.setPosition(0.5);
         }
 
         if(gamepad2.dpad_left){
-            claw.setPosition(1);
+            claw.setPosition(0.5);
         }
         else if(gamepad2.dpad_right){
             claw.setPosition(0);
@@ -263,6 +266,24 @@ public class ian_BasicOpMode_Iterative extends OpMode {
         }
         else{
             horizontal.setPower(0);
+        }
+        if(gamepad2.left_trigger > 0){
+            relicArm.setPower(gamepad2.left_trigger);
+        }
+        else if(gamepad2.right_trigger > 0){
+            relicArm.setPower(-gamepad2.right_trigger);
+        }
+        else{
+            relicArm.setPower(0);
+        }
+        if (gamepad2.y){
+            verticalRelicArm.setPower(-1.0);
+        }
+        else if (gamepad2.a){
+            verticalRelicArm.setPower(1.0);
+        }
+        else{
+            verticalRelicArm.setPower(0);
         }
                 //arm.setPower(0);
         // Show the elapsed game time and wheel power.
